@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+    <title>Angular Examples</title>
+</head>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+<body>
+<div ng-controller="listController">
+
+  <div>I am  an array</div>
+<input type="search" ng-model="search">
+   <li ng-repeat="name in names | filter:search">{{name}}</li>
+</div>
+<div ng-controller="listController2">
+    <hr>
+
+    <div>I am  an Object</div>
+    <input type="search" ng-model="search">
+    <li ng-repeat="name in names | filter:search">{{name.name}}&NonBreakingSpace;{{name.age}}</li>
+
+ </div>
+</body>
+
+<script>
+    var listController = function($scope){
+        $scope.names=["anuj" , "Krishank" , "Balram" , "Rahul"];
+    }
+
+    var listController2 = function($scope){
+        $scope.names=[
+            {"name" : "Anuj" , "age" : 23},
+            {"name" : "Krisank" , "age" : 23},
+            {"name" : "Balram" , "age" : 25},
+            {"name" : "Rahul" , "age" : 24},
+
+        ];
+    }
+
+</script>
+
+</html>
