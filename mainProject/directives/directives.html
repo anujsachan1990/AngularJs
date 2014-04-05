@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+    <title>Angular Examples</title>
+</head>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+<body>
+
+    <input type="checkbox" ng-model="notChecked"><label>Hide this {{name || ", you can change me bt type in input box"}}</label>
+    <div ng-hide="notChecked">Not Checked<input ng-model="name"></div>
+
+    <hr>
+    <input type="checkbox" ng-model="checked"><label>Show This</label>
+    <div ng-show="checked">Hello</div>
+
+</body>
+
+
+
+</html>
