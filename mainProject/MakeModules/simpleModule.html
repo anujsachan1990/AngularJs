@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <title>Angular simple module example</title>
+</head>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+<body>
+<div ng-controller="example"> {{name}}</div>
+</body>
+<script>
+    angular.module("myApp" , [])
+            .controller("example" , function($scope){
+               $scope.name = "Anuj Sachan module test"
+            });
+</script>
+</html>
