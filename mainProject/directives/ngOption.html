@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+    <title>Angular Examples g-options</title>
+</head>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+
+<body>
+<div ng-controller="contact">
+    <input type="search" ng-model="search">
+    <select ng-model="selectName" ng-options="person.name for person in people | filter:search">
+        <option value="">Choose a person</option>
+    </select>
+    <div style="margin-top:40px"> {{selectName.name || "no-options"}} is  selected</div>
+
+    <hr/>
+
+    <input  ng-model="selectName.name" ng-show="selectName.name" placeholder="Edit Name">
+</div>
+<script>
+var contact = function($scope){
+$scope.people = [
+    {name:"anuj" , contact:9990561508},
+    {name:"rahul", contact:99900562214},
+    {name:"Balram" , Contact:9990562234},
+    {name:"Manku" , contact:9990565588}
+]
+}
+</script>
+</body>
+</html
