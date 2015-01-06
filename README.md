@@ -1,2 +1,3 @@
 AngularJs
 =========
+THIS IS FOR BASIC EXPAMPLE FOR ANGULAR JS
